@@ -5,8 +5,13 @@ import { Gallery } from "@/pages/Gallery";
 import { About } from "@/pages/About";
 import { Contact } from "@/pages/Contact";
 import { NotFound } from "@/pages/NotFound";
+import { AdminPanel } from "@/pages/AdminPanel";
 
 export const routes: RouteObject[] = [
+  {
+    path: "/adminpanel",
+    element: <AdminPanel />,
+  },
   {
     path: "/",
     element: <MainLayout />,
