@@ -1,3 +1,5 @@
+import { ContactForm } from "@/components/ContactForm";
+
 export function Contact() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-8 md:px-6 md:py-12 flex-1 flex flex-col justify-center">
@@ -8,4 +10,6 @@ export function Contact() {
       </div>
     </div>
   );
+  return <ContactForm />;
+
 }

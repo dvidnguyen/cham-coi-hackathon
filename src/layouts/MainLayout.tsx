@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { AnimatedOutlet } from "@/components/AnimatedOutlet";
-import { BracketLink } from "@/components/BracketLink";
+import { NavItem } from "@/components/NavItem";
 import { ContactButton } from "@/components/ContactButton";
 import { Logo } from "@/components/Logo";
 
@@ -13,6 +13,18 @@ const leftNav = [
 
 export function MainLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Hide the header when scrolling down, reveal it when scrolling back up.
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious();
+    if (previous === undefined) return;
+    const direction = current - previous;
+    // Ignore micro-scroll; only hide once past the header height.
+    if (direction > 6 && current > 100) setHidden(true);
+    else if (direction < -6) setHidden(false);
+  });
 
   // Lock body scroll + allow Escape to close while the mobile menu is open.
   useEffect(() => {
@@ -29,9 +41,15 @@ export function MainLayout() {
     };
   }, [menuOpen]);
 
+  const headerHidden = hidden && !menuOpen;
+
   return (
     <div className="flex min-h-svh flex-col bg-ink text-white">
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-md">
+      <motion.header
+        animate={{ y: headerHidden ? "-130%" : "0%" }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        className="sticky top-0 z-40 border-b border-white/10 bg-ink/80 backdrop-blur-md"
+      >
         <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 md:h-20 md:px-6">
           <div className="flex items-center gap-4">
             <Hamburger
@@ -40,7 +58,7 @@ export function MainLayout() {
             />
             <nav className="hidden items-center gap-6 md:flex">
               {leftNav.map((item) => (
-                <BracketLink key={item.to} {...item} />
+                <NavItem key={item.to} {...item} />
               ))}
             </nav>
           </div>
@@ -49,7 +67,7 @@ export function MainLayout() {
 
           <ContactButton />
         </div>
-      </header>
+      </motion.header>
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
 
@@ -59,7 +77,7 @@ export function MainLayout() {
 
       <footer className="border-t border-white/10">
         <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-center px-4 text-[0.7rem] tracking-[0.3em] text-white/40 md:px-6">
-          © {new Date().getFullYear()} CHẠM CÕI
+          © {new Date().getFullYear()} CHẠM CỘI. All rights reserved.   | Team R Grab The Hackathon 2026
         </div>
       </footer>
     </div>
@@ -113,7 +131,7 @@ function MobileMenu({
           className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-ink md:hidden"
         >
           {leftNav.map((item) => (
-            <BracketLink key={item.to} {...item} large onNavigate={onClose} />
+            <NavItem key={item.to} {...item} large onNavigate={onClose} />
           ))}
         </motion.div>
       )}
