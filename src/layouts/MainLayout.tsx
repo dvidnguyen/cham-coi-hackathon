@@ -71,7 +71,7 @@ export function MainLayout() {
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 md:px-6 md:py-12">
+      <main className="w-full flex-1 flex flex-col">
         <AnimatedOutlet />
       </main>
 
