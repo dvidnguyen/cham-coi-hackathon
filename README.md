@@ -15,9 +15,9 @@ Khởi tạo React + TypeScript + TailwindCSS + React Router (Vite).
 ```bash
 pnpm install
 pnpm dev          # chạy dev server tại http://localhost:5173
-pnpm build        # build production (tsc + vite)
-pnpm preview      # xem bản build production
-pnpm typecheck    # kiểm tra kiểu
+# pnpm build        # build production (tsc + vite)
+# pnpm preview      # xem bản build production
+# pnpm typecheck    # kiểm tra kiểu
 ```
 
 ## Cấu trúc
