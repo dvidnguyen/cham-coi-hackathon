@@ -12,7 +12,7 @@ type RoundLinkProps = {
  */
 export function RoundLink({
   to = "/gallery",
-  label = "Visit Gallery",
+  label = "Ghé trưng bày",
   className = "",
 }: RoundLinkProps) {
   return (

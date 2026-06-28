@@ -16,19 +16,19 @@ type Quote = {
 
 const quotes: Quote[] = [
   {
-    text: "In the spaces where teenagers and elders meet, we don't just share stories—we heal the distance between times.",
+    text: "Trong không gian nơi người trẻ và người lớn tuổi gặp gỡ, chúng ta không chỉ chia sẻ câu chuyện — mà còn chữa lành khoảng cách giữa những thời đại.",
     author: "Nguyễn Quang Linh",
-    role: "CHẠM CÕI Founder",
+    role: "Nhà sáng lập CHẠM CỘI",
   },
   {
-    text: "Listening to their stories made me realize that our struggles are not new, and their strength is a guide for our path.",
+    text: "Lắng nghe những câu chuyện của các cụ khiến tôi nhận ra rằng những trăn trở của chúng ta không hề mới, và sức mạnh của các cụ là kim chỉ nam cho con đường phía trước.",
     author: "Lê Minh Thư",
-    role: "Youth Participant (17 years old)",
+    role: "Người trẻ tham gia (17 tuổi)",
   },
   {
-    text: "Wisdom is not a relic of the past, but a light for the future when held in the hands of the young.",
+    text: "Trí tuệ không phải là di vật của quá khứ, mà là ánh sáng cho tương lai khi được gửi gắm trong đôi tay của người trẻ.",
     author: "Bác Nguyễn Văn Hai",
-    role: "Elderly Mentor (74 years old)",
+    role: "Người hướng dẫn cao niên (74 tuổi)",
   },
 ];
 
@@ -41,23 +41,23 @@ type Value = {
 const values: Value[] = [
   {
     num: "01",
-    title: "Empathy First",
-    desc: "We listen with deep intent, bridging the decades between us with patience, open hearts, and mutual respect.",
+    title: "Thấu cảm trước hết",
+    desc: "Chúng tôi lắng nghe bằng cả sự chú ý sâu sắc, bắc cầu những thập kỷ giữa các thế hệ bằng sự kiên nhẫn, trái tim mở và sự tôn trọng lẫn nhau.",
   },
   {
     num: "02",
-    title: "Cultural Continuity",
-    desc: "We believe traditional arts and personal memories are living heritages that must be active in the present, not archived in the past.",
+    title: "Tiếp nối văn hóa",
+    desc: "Chúng tôi tin rằng nghệ thuật truyền thống và ký ức cá nhân là di sản sống, cần được hiện diện trong hiện tại chứ không cất giữ mãi trong quá khứ.",
   },
   {
     num: "03",
-    title: "Mutual Growth",
-    desc: "The connection is a two-way street. Elders share lifetime wisdom and traditional crafts, while teenagers share their energy and digital voice.",
+    title: "Cùng nhau trưởng thành",
+    desc: "Sự kết nối là một con đường hai chiều. Người lớn tuổi trao truyền trí tuệ cả đời và nghề thủ công truyền thống, còn người trẻ góp phần năng lượng và tiếng nói thời đại số.",
   },
   {
     num: "04",
-    title: "Authentic Expression",
-    desc: "Whether through lacquer painting, spoken stories, or digital art, we encourage honest and creative self-expression.",
+    title: "Biểu đạt chân thật",
+    desc: "Dù qua tranh sơn mài, những câu chuyện được kể hay nghệ thuật số, chúng tôi khuyến khích sự tự thể hiện chân thật và sáng tạo.",
   },
 ];
 
@@ -178,7 +178,7 @@ export function About() {
         >
           <img
             src={whyExistImg}
-            alt="Intergenerational connection lacquer painting"
+            alt="Tranh sơn mài giao thoa các thế hệ"
             className="w-full h-full object-cover"
           />
           {/* Dark overlay that deepens when zoomed for readability */}
@@ -197,7 +197,7 @@ export function About() {
         >
           <img 
             src={aboutGateImg} 
-            alt="Left gate door" 
+            alt="Cánh cổng bên trái" 
             className="absolute top-0 left-0 w-[100vw] h-full max-w-none object-cover"
           />
         </motion.div>
@@ -210,7 +210,7 @@ export function About() {
         >
           <img 
             src={aboutGateImg} 
-            alt="Right gate door" 
+            alt="Cánh cổng bên phải" 
             className="absolute top-0 right-0 w-[100vw] h-full max-w-none object-cover"
           />
         </motion.div>
@@ -231,13 +231,13 @@ export function About() {
           transition={{ duration: 0.1 }}
           className="absolute z-30 flex flex-col items-center pointer-events-none text-center px-4"
         >
-          <span className="text-xs uppercase tracking-[0.4em] text-[#c5a880] mb-3">About CHẠM CÕI</span>
+          <span className="text-xs uppercase tracking-[0.4em] text-[#c5a880] mb-3">Về CHẠM CỘI</span>
           <h1 className="font-display text-5xl md:text-7xl text-white">
-            Why We Exist
+            Vì Sao Chúng Tôi Tồn Tại
           </h1>
           {progress === 0 && (
             <p className="text-xs text-white/40 tracking-widest uppercase mt-8 animate-pulse">
-              Scroll down to open
+              Cuộn xuống để mở
             </p>
           )}
         </motion.div>
@@ -251,15 +251,15 @@ export function About() {
           transition={{ duration: 0.1 }}
           className="absolute z-30 max-w-2xl px-6 text-center flex flex-col items-center justify-center pointer-events-auto"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-[#c5a880] mb-4">Our Vision</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-[#c5a880] mb-4">Tầm nhìn</span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-white mb-6">
-            Bridging the Decades
+            Bắc Cầu Giữa Các Thế Hệ
           </h2>
           <p className="font-sans text-sm md:text-base text-white/80 leading-relaxed font-light mb-6">
-            Every elder is a living library of stories, memories, and traditional craft. Yet, in our fast-paced digital world, their voices often sit in silence. At the same time, teenagers possess boundless energy and tools to shape the future, but seek grounding, identity, and guidance.
+            Mỗi người lớn tuổi là một thư viện sống của những câu chuyện, ký ức và nghề thủ công truyền thống. Thế nhưng, trong thế giới số hối hả, tiếng nói của các cụ thường chìm vào im lặng. Trong khi đó, người trẻ sở hữu nguồn năng lượng và công cụ vô tận để kiến tạo tương lai, nhưng lại khao khát một điểm tựa, một bản ngã và những dẫn dắt.
           </p>
           <p className="font-sans text-sm md:text-base text-[#c5a880]/90 leading-relaxed font-light">
-            CHẠM CÕI is a dedicated gateway. We bring elders and teenagers together in creative harmony to share oral histories, teach traditional lacquer painting, and build lasting bonds that restore continuity to our cultural fabric.
+            CHẠM CỘI là một cánh cổng dấn thân. Chúng tôi đưa người lớn tuổi và người trẻ cùng hòa điệu sáng tạo để chia sẻ những câu chuyện truyền miệng, dạy tranh sơn mài truyền thống và kiến tạo những mối liên kết bền vững — khôi phục sự liền mạch cho mạch nguồn văn hóa của chúng ta.
           </p>
         </motion.div>
       </div>
@@ -277,7 +277,7 @@ export function About() {
               transition={{ duration: 0.8 }}
               className="block text-xs uppercase tracking-[0.3em] text-[#c5a880] mb-3"
             >
-              The Journey
+              Hành trình
             </motion.span>
             
             <h2 className="font-display text-5xl md:text-7xl font-light tracking-tight text-white leading-tight">
@@ -288,9 +288,9 @@ export function About() {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="italic text-[#c5a880]/90 mr-4 font-normal"
               >
-                (Our Story)
+                (Câu chuyện của chúng tôi)
               </motion.span>
-              Celebrating Heritage
+              Tôn Vinh Di Sản
             </h2>
           </div>
 
@@ -308,7 +308,7 @@ export function About() {
               >
                 <img 
                   src={ourStory1Img} 
-                  alt="Elderly artisan teaching lacquer craft" 
+                  alt="Nghệ nhân cao niên dạy nghề sơn mài" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -322,13 +322,13 @@ export function About() {
                 className="max-w-xl space-y-6"
               >
                 <h3 className="font-display text-2xl md:text-3xl text-amber-100/90 font-light italic">
-                  Where oral tradition meets canvas.
+                  Nơi truyện kể truyền miệng hòa vào toan vẽ.
                 </h3>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
-                  We began as a group of local artists and social workers who observed a widening chasm between generations in urban areas. Elders spoke of isolation, and teenagers felt disconnected from their heritage. We realized art could serve as the ultimate connective tissue.
+                  Chúng tôi khởi đầu từ một nhóm nghệ sĩ và nhân viên xã hội địa phương, những người nhận thấy khoảng cách ngày càng lớn giữa các thế hệ tại vùng đô thị. Người lớn tuổi tâm sự về nỗi cô đơn, còn người trẻ cảm thấy xa lạ với chính di sản của mình. Chúng tôi nhận ra nghệ thuật có thể trở thành chất kết nối sâu sắc nhất.
                 </p>
                 <p className="text-sm md:text-base text-white/70 leading-relaxed font-light">
-                  By centering our workshops around traditional Vietnamese lacquer painting — a slow, meditative process requiring layers of paint, drying, and polishing — we created a natural space for conversation. As hands work with gold leaf and resin, stories flow freely.
+                  Bằng cách xoay quanh các buổi workshop nghệ thuật sơn mài truyền thống Việt Nam — một quá trình chậm rãi, thiền định đòi hỏi nhiều lớp sơn, sự khô dần và đánh bóng — chúng tôi tạo ra một không gian tự nhiên cho những cuộc trò chuyện. Khi đôi tay chạm vào vàng lá và nhựa cây, những câu chuyện tự khắc tuôn chảy.
                 </p>
               </motion.div>
             </div>
@@ -342,9 +342,9 @@ export function About() {
                 transition={{ duration: 0.8 }}
                 className="border-l border-[#c5a880]/30 pl-6 space-y-4"
               >
-                <p className="text-sm text-[#c5a880] tracking-widest uppercase">The Spark</p>
+                <p className="text-sm text-[#c5a880] tracking-widest uppercase">Đốm lửa khởi nguyên</p>
                 <p className="text-sm md:text-base text-white/80 leading-relaxed font-light">
-                  "Seeing the eyes of a teenager light up when they learn a stroke from a grandmother, and seeing that grandmother feel valued, is why we commit to this. It is a dialogue of silence, laughter, and rediscovery."
+                  "Nhìn ánh mắt một người trẻ sáng lên khi được học một nét cọ từ một bà cụ, và thấy bà cụ ấy cảm thấy được trân trọng — đó là lý do chúng tôi dấn thân vào điều này. Đó là một cuộc đối thoại của sự im lặng, tiếng cười và sự tái khám phá."
                 </p>
               </motion.div>
 
@@ -357,7 +357,7 @@ export function About() {
               >
                 <img 
                   src={ourStory2Img} 
-                  alt="Teenager smiling with elderly mentor" 
+                  alt="Người trẻ cười bên người hướng dẫn cao niên" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -375,12 +375,12 @@ export function About() {
             
             {/* Left Sticky Column */}
             <div className="lg:col-span-4 lg:sticky lg:top-28 h-fit">
-              <span className="text-xs uppercase tracking-[0.3em] text-[#c5a880] mb-3 block">Our Pillars</span>
+              <span className="text-xs uppercase tracking-[0.3em] text-[#c5a880] mb-3 block">Giá trị nền tảng</span>
               <h2 className="font-display text-4xl md:text-5xl font-light text-white mb-6 uppercase tracking-wider leading-tight">
-                What Guides Us
+                Điều dẫn dắt chúng ta
               </h2>
               <p className="text-sm text-white/60 leading-relaxed font-light">
-                These core values form the foundation of every dialogue, project, and workshop we build. They ensure that we honor the past while embracing the vitality of the future.
+                Những giá trị cốt lõi này là nền tảng cho mọi cuộc đối thoại, dự án và buổi workshop mà chúng tôi kiến tạo. Chúng đảm bảo rằng chúng tôi tôn vinh quá khứ, đồng thời đón nhận sức sống của tương lai.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export function About() {
         <div className="absolute inset-0 z-0">
           <img 
             src={quotesBgImg} 
-            alt="Monochrome terraced fields landscape" 
+            alt="Cảnh ruộng bậc thang đơn sắc" 
             className="w-full h-full object-cover grayscale opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink" />
@@ -469,7 +469,7 @@ export function About() {
               <button
                 key={idx}
                 onClick={() => setCurrentQuote(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
+                aria-label={`Đến trích dẫn ${idx + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   currentQuote === idx ? "w-8 bg-[#c5a880]" : "w-1.5 bg-white/20 hover:bg-white/40"
                 }`}
@@ -481,7 +481,7 @@ export function About() {
         {/* Subtle arrow hooks (Left/Right) for tactile navigation */}
         <button
           onClick={() => setCurrentQuote((prev) => (prev - 1 + quotes.length) % quotes.length)}
-          aria-label="Previous quote"
+          aria-label="Trích dẫn trước"
           className="absolute left-6 md:left-12 z-20 w-12 h-12 rounded-full border border-white/5 hover:border-white/20 hover:bg-white/5 flex items-center justify-center text-white/50 hover:text-white transition-all duration-300"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -491,7 +491,7 @@ export function About() {
 
         <button
           onClick={() => setCurrentQuote((prev) => (prev + 1) % quotes.length)}
-          aria-label="Next quote"
+          aria-label="Trích dẫn tiếp theo"
           className="absolute right-6 md:right-12 z-20 w-12 h-12 rounded-full border border-white/5 hover:border-white/20 hover:bg-white/5 flex items-center justify-center text-white/50 hover:text-white transition-all duration-300"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

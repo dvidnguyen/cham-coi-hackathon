@@ -90,7 +90,7 @@ export function Home() {
         {/* Scroll indicator — bottom-right, above the title */}
         <div className="absolute bottom-0 right-0 flex items-center gap-2 text-white/50">
           <span className="text-[01rem] font-light uppercase tracking-[0.3em]">
-            Scroll
+            Cuộn
           </span>
           <svg
             viewBox="0 0 24 24"

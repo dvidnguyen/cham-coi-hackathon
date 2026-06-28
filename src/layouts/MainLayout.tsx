@@ -6,10 +6,11 @@ import { ContactButton } from "@/components/ContactButton";
 import { Logo } from "@/components/Logo";
 
 const leftNav = [
-  { to: "/", label: "Home", end: true },
-  { to: "/about", label: "About" },
+  { to: "/", label: "Trang Chủ", end: true },
+  { to: "/about", label: "Giới Thiệu" },
   { to: "/phuc-loi", label: "Phúc Lợi" },
-  { to: "/gallery", label: "Gallery" },
+  { to: "/gallery", label: "Trưng Bày" },
+  { to: "/tri-thuc", label: "Tri Thức" },
 ] as const;
 
 export function MainLayout() {

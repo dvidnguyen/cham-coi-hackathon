@@ -15,7 +15,7 @@ export function ContactButton({
     <NavLink
       to="/contact"
       onClick={onNavigate}
-      aria-label="contact"
+      aria-label="liên hệ"
       className={[
         "group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/20 px-5 py-2",
         className,
@@ -37,7 +37,7 @@ export function ContactButton({
               isActive ? "text-white" : "text-white/80"
             }`}
           >
-            Contact
+            Liên Hệ
           </span>
         </>
       )}

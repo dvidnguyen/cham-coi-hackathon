@@ -6,6 +6,7 @@ import { About } from "@/pages/About";
 import { Contact } from "@/pages/Contact";
 import { Benefits } from "@/pages/Benefits";
 import { FamilyRegister } from "@/pages/FamilyRegister";
+import { Heritage } from "@/pages/Heritage";
 import { NotFound } from "@/pages/NotFound";
 
 export const routes: RouteObject[] = [
@@ -22,6 +23,7 @@ export const routes: RouteObject[] = [
       { path: "contact", element: <Contact /> },
       { path: "phuc-loi", element: <Benefits /> },
       { path: "dang-ky-gia-dinh", element: <FamilyRegister /> },
+      { path: "tri-thuc", element: <Heritage /> },
       // Feature routes will be added here as children of MainLayout.
     ],
   },
