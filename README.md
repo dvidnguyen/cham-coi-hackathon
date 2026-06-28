@@ -3,7 +3,8 @@
 Khởi tạo React + TypeScript + TailwindCSS + React Router (Vite), với **Trí Tuệ
 Từ Đời Xưa** — trang AI di sản `/tri-thuc` dùng RAG trên kho câu chuyện Việt.
 
-## Tech stack
+
+Chạm Cội is a digital platform that connects elderly **Senior Advisors** — retired artisans, teachers, historians, and experienced professionals — with **university students** seeking real-life mentorship and cultural knowledge. Universities, businesses, and families can sponsor or book sessions; the platform sources, vets, and schedules Senior Advisors so their knowledge keeps a place in society — and so they earn an income for sharing it.
 
 - **Vite** — dev server & bundler
 - **React 19** + **TypeScript**
@@ -13,7 +14,7 @@ Từ Đời Xưa** — trang AI di sản `/tri-thuc` dùng RAG trên kho câu ch
 - **Google Gemini** (`@google/generative-ai`) — chat + embeddings
 - **pnpm** — package manager
 
-## Bắt đầu
+---
 
 ```bash
 pnpm install
@@ -70,7 +71,8 @@ src/
 └── main.tsx           # Entry point
 ```
 
-## Routing
+- New feature routes are added as children of `MainLayout` in `src/router/index.tsx`.
+- The `@/` import alias points to `src/`.
 
 Route cấu hình tại `src/router/index.tsx`. Các feature route mới thêm vào mảng
 `children` của `MainLayout`. Alias `@/` trỏ tới `src/`. Trang AI di sản tại
