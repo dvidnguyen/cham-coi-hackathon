@@ -18,18 +18,33 @@ const quotes: Quote[] = [
   {
     text: "In the spaces where teenagers and elders meet, we don't just share stories—we heal the distance between times.",
     author: "Nguyễn Quang Linh",
-    role: "CHẠM CÕI Founder",
-  },
-  {
-    text: "Listening to their stories made me realize that our struggles are not new, and their strength is a guide for our path.",
-    author: "Lê Minh Thư",
-    role: "Youth Participant (17 years old)",
+    role: "CHẠM CỘI Founder",
   },
   {
     text: "Wisdom is not a relic of the past, but a light for the future when held in the hands of the young.",
     author: "Bác Nguyễn Văn Hai",
     role: "Elderly Mentor (74 years old)",
   },
+  {
+    text: "Listening to their stories made me realize that our struggles are not new, and their strength is a guide for our path.",
+    author: "Nguyễn Đan Khánh Ngọc",
+    role: "Youth Participant (21 years old)",
+  },
+  {
+    text: "Teenagers and the elderly are the two beautiful extremes of human life. When they connect, the energy of the future meets the wisdom of the past, creating a bridge that holds society together.",
+    author: "Nguyễn Đăng Khôi",
+    role: "Youth Participant (22 years old)",
+  },
+  {
+    text: "There is a secret kinship between the young and the old. Both groups stand slightly outside the frantic rush of mid-life production, allowing them to see what truly matters: patience, laughter, and the value of a really good story.",
+    author: "Võ Thị Đông Nghi",
+    role: "Youth Participant (21 years old)",
+  },
+  {
+    text: "The elderly give teenagers an anchor—a sense of history, roots, and unconditional acceptance. In return, teenagers give the elderly a torch—filling their days with new light, energy, and a reminder that the world keeps moving forward.",
+    author: "Nguyễn Quốc Hải",
+    role: "Youth Participant (21 years old)",
+  }
 ];
 
 type Value = {
