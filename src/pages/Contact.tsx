@@ -1,9 +1,10 @@
+import { ContactForm } from "@/components/ContactForm";
+
 export function Contact() {
+
   return (
-    <div className="flex flex-col items-center gap-4 py-24 text-center">
-      <h1 className="font-display text-7xl font-light tracking-tight text-white md:text-9xl">
-        Contact
-      </h1>
+    <div className="flex flex-1 flex-col justify-center">
+      <ContactForm />
     </div>
   );
 }
