@@ -1,0 +1,19 @@
+# Chạm Cội — one-command cloud deploy.
+#
+#   1. Put your key in .env:  GEMINI_API_KEY=AIza...
+#   2. docker compose up --build
+#   3. open http://<host>:3001/tri-thuc
+#
+# docker compose reads GEMINI_API_KEY from the .env file automatically.
+services:
+  web:
+    build: .
+    image: cham-coi
+    container_name: cham-coi
+    ports:
+      - "${PORT:-3001}:3001"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      PORT: 3001
+      NODE_ENV: production
+    restart: unless-stopped

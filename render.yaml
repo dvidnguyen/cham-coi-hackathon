@@ -1,0 +1,17 @@
+# Render Blueprint — 1-click deploy from GitHub.
+# Push repo to GitHub → New → Blueprint → pick this repo → Render reads this file.
+# Set GEMINI_API_KEY in the Render dashboard (it's marked sync:false = secret).
+# Render auto-injects PORT; the server reads process.env.PORT already.
+services:
+  - type: web
+    name: cham-coi
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production

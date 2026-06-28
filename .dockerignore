@@ -1,0 +1,31 @@
+# Dependencies & build artefacts (installed/built fresh inside the image)
+node_modules
+dist
+dist-ssr
+
+# Secrets — NEVER bake into the image; pass GEMINI_API_KEY at runtime
+.env
+.env.*
+!.env.example
+
+# Version control & editor clutter
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# Logs & caches
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.tsbuildinfo
+
+# Docker artefacts (avoid recursive context)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Docs
+README.md
+docs

@@ -1,0 +1,37 @@
+# Fly.io config for Chạm Cội.
+#   flyctl auth login
+#   flyctl launch --no-deploy   (creates the app, uses this + Dockerfile)
+#   flyctl secrets set GEMINI_API_KEY=<paste key>
+#   flyctl deploy
+#
+# App: single Express server on :3001 (serves built SPA + /api RAG).
+# Region: Singapore (closest to Vietnam). Change if you target another region.
+# Free-tier VM: shared-cpu-1x / 256MB — enough for Node + 24 in-memory embeddings.
+
+app = "cham-coi"
+primary_region = "sin"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3001"
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port = 3001
+  force_https = true
+  # Scale to zero when idle (free tier). First request after idle ≈ 30-50s
+  # cold start + ~20s corpus embedding. Set min_machines_running = 1 to stay hot.
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 250
+    soft_limit = 20
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"

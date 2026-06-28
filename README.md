@@ -38,6 +38,24 @@ PORT=3001
 Không có key thì server vẫn khởi động; `/api/chat` trả `503 NO_API_KEY` và trang
 hiện thông báo "Chưa cấu hình GEMINI_API_KEY — xem README".
 
+## Triển khai (Docker)
+
+Một image duy nhất: build frontend + chạy Express server (serve `dist/` + `/api`
+cùng cổng). Key đọc tự động từ `.env`.
+
+```bash
+# Build & chạy local (cần Docker Desktop đang mở):
+docker compose up --build        # → http://localhost:3001/tri-thuc
+
+# Hoặc build thủ công rồi chạy trên cloud:
+docker build -t cham-coi .
+docker run -d -p 3001:3001 -e GEMINI_API_KEY=<key> --name cham-coi cham-coi
+```
+
+Cloud (Fly.io / Render / Railway / VPS): push image hoặc để platform tự build từ
+`Dockerfile`. Đặt env `GEMINI_API_KEY`; expose port `3001`. Không có key thì server
+vẫn chạy, chỉ `/api/chat` trả 503.
+
 ## Trí Tuệ Từ Đời Xưa (`/tri-thuc`)
 
 Trang chat với một "người lớn tuổi" AI — câu trả lời được chốt lọc bằng RAG từ

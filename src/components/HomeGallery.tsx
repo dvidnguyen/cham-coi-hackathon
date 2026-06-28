@@ -74,7 +74,7 @@ export function HomeGallery() {
             The spaces we shared
           </span>
           <h2 className="font-display text-[clamp(2rem,6vw,5rem)] font-light leading-[0.9] tracking-tight text-white">
-            Moments <em className="italic text-white/60">Of</em> Connection
+            Giao Thoa  <em className="italic text-white/60">Of</em> Thời đại
           </h2>
           <Emblem />
         </div>
