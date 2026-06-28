@@ -1,4 +1,20 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import { RoundLink } from "@/components/RoundLink";
+import { SubImage } from "@/components/SubImage";
+import { HomeIntro } from "@/components/HomeIntro";
+import { HomeGallery } from "@/components/HomeGallery";
+
+const MAIN = "/home-sector01/main-frame-section01.avif";
+const SUBS = [
+  { src: "/home-sector01/sub-frame-section01.avif", alt: "Heritage frame I" },
+  { src: "/home-sector01/sub-frame-section02.avif", alt: "Heritage frame II" },
+  { src: "/home-sector01/sub-frame-section03.avif", alt: "Heritage frame III" },
+];
+
+const INTRO =
+  "Chạm Cội — Góc nhìn đương đại về di sản Việt được chọn lọc kỹ lưỡng: Nơi ký ức, nghệ thủ công và những khoảng lặng giao thoa trên từng bức tường.";
 
 export function Home() {
   const [activeSub, setActiveSub] = useState<number | null>(null);
@@ -131,6 +147,9 @@ export function Home() {
       >
         Mo Admin Panel
       </Link>
-    </div>
+    </section>
+    <HomeIntro />
+    <HomeGallery />
+    </>
   );
 }
