@@ -7,8 +7,13 @@ import { Contact } from "@/pages/Contact";
 import { Benefits } from "@/pages/Benefits";
 import { FamilyRegister } from "@/pages/FamilyRegister";
 import { NotFound } from "@/pages/NotFound";
+import { AdminPanel } from "@/pages/AdminPanel";
 
 export const routes: RouteObject[] = [
+  {
+    path: "/adminpanel",
+    element: <AdminPanel />,
+  },
   {
     path: "/",
     element: <MainLayout />,
