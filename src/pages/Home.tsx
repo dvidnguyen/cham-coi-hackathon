@@ -21,7 +21,7 @@ export function Home() {
 
   return (
     <>
-    <section className="relative flex w-full flex-col overflow-hidden">
+    <section className="mx-auto w-full max-w-6xl relative flex w-full flex-col overflow-hidden">
       {/* background image */}
       <div className="absolute inset-0 z-0">
         <img
