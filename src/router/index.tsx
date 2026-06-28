@@ -4,6 +4,8 @@ import { Home } from "@/pages/Home";
 import { Gallery } from "@/pages/Gallery";
 import { About } from "@/pages/About";
 import { Contact } from "@/pages/Contact";
+import { Benefits } from "@/pages/Benefits";
+import { FamilyRegister } from "@/pages/FamilyRegister";
 import { NotFound } from "@/pages/NotFound";
 
 export const routes: RouteObject[] = [
@@ -18,6 +20,8 @@ export const routes: RouteObject[] = [
       { path: "gallery", element: <Gallery /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "phuc-loi", element: <Benefits /> },
+      { path: "dang-ky-gia-dinh", element: <FamilyRegister /> },
       // Feature routes will be added here as children of MainLayout.
     ],
   },

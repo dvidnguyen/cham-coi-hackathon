@@ -36,6 +36,9 @@ export function Home() {
       {/* ───────── TOP ZONE: image composition ───────── */}
       {/* Desktop / tablet: staggered absolute composition */}
       <div className="relative z-10 hidden h-[66vh] min-h-[500px] md:block">
+        {/* inset gutter — pushes edge-anchored frames inward, keeps the
+            centred main image centred (symmetric left/right inset) */}
+        <div className="absolute inset-y-0 left-6 right-6 md:left-10 md:right-10 lg:left-16 lg:right-16">
         {/* text block — top-left */}
         <div className="absolute left-0 top-4 w-52">
           <p className="text-sm leading-relaxed text-white/70">{INTRO}</p>
@@ -106,6 +109,7 @@ export function Home() {
             />
           </svg>
         </div>
+        </div>
       </div>
 
       {/* Mobile: stacked composition (hover bloom is desktop-only) */}
@@ -132,9 +136,9 @@ export function Home() {
       </div>
 
       {/* ───────── BIG TITLE ───────── */}
-      <h1 className="relative z-10 flex items-end ml-10 font-display text-[clamp(3rem,12vw,9rem)] font-light leading-[0.85] tracking-tight text-white">
-        <span>Chạm</span>
-        <span>Cội</span>
+      <h1 className="relative z-10 flex items-end ml-6 md:ml-10 lg:ml-16 font-display text-[clamp(3rem,12vw,9rem)] font-light leading-[0.85] tracking-tight text-white">
+        <span>Chạm </span>
+        <span> Cội</span>
       </h1>
     </section>
     <HomeIntro />

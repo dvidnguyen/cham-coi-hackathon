@@ -8,6 +8,7 @@ import { Logo } from "@/components/Logo";
 const leftNav = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
+  { to: "/phuc-loi", label: "Phúc Lợi" },
   { to: "/gallery", label: "Gallery" },
 ] as const;
 
